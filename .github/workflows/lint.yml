@@ -12,11 +12,7 @@ jobs:
         name: 'setup node'
         with:
           node-version: '16.x'
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: install
-
-      - name: 'install'
+      - name: 'deps'
         run: yarn deps
 
       - name: 'lint'
