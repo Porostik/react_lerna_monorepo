@@ -1,6 +1,6 @@
 {
   "name": "@test/mobile_app",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@test/shared": "^1.0.0",
+    "@test/shared": "^0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
