@@ -11,7 +11,7 @@ const Root = () => {
   return (
     <>
       <Button onClick={() => setIsMobile((prev) => !prev)}>
-        Change app mode
+        Change app mode test
       </Button>
       {isMobile ? <MobileApp /> : <DesktopApp />}
     </>
