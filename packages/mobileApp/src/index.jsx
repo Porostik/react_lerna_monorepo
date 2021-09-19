@@ -1,5 +1,5 @@
-import { Button } from '@test/shared/components';
 import React from 'react';
+import { Button } from '@test/shared/components';
 
 export const MobileApp = () => (
   <>

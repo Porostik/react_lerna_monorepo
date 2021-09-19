@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   root: true,
   env: {
@@ -14,7 +16,9 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      webpack: {},
+      webpack: {
+        config: path.join(__dirname, 'packages', 'app', 'webpack.config.js'),
+      },
       node: {
         extensions: ['.js', '.jsx'],
       },
