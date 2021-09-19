@@ -12,7 +12,10 @@
     "lint:all": "eslint --debug 'packages/*/src/**/*.js*' --color",
     "lint:fix": "eslint --fix 'packages/*/src/**/*.js*'",
     "prepare": "husky install",
-    "staged": "lint-staged"
+    "staged": "lint-staged",
+    "install:app": "lerna add --scope @test/app",
+    "install:mobile": "lerna add --scope @test/mobile_app",
+    "install:shared": "lerna add --scope @test/shared"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +23,7 @@
     "packages/**"
   ],
   "devDependencies": {
+    "agent-base": "^6.0.2",
     "eslint": "^7.29.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
