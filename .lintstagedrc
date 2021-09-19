@@ -1,0 +1,9 @@
+{
+    "*.(js|jsx)": [
+        "eslint --fix",
+        "npm run format"
+    ],
+    "*.(json|yaml|yml)": [
+        "npm run format"
+    ]
+}

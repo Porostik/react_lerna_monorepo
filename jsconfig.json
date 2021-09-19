@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "baseUrl": ["."],
+      "@test/mobile_app": ["./packages/mobileApp/src"],
+      "@test/shared/*": ["./packages/shared/src/*"]
+    }
+  },
+  "exclude": ["node_modules/", "packages/**/node_modules"]
+}
