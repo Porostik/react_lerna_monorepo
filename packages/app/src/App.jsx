@@ -1,1 +1,3 @@
-export const DesktopApp = () => <h1>1Desktop App</h1>;
+import React from 'react';
+
+export const DesktopApp = () => <h1>Desktop App</h1>;

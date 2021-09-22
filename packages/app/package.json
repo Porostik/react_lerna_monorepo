@@ -6,9 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --color",
-    "start": "webpack serve --color",
-    "lint": "eslint src/**/* --color",
-    "lint:fix": "eslint --fix src/**/* --color"
+    "start": "webpack serve --color"
   },
   "license": "ISC",
   "devDependencies": {

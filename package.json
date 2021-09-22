@@ -10,7 +10,7 @@
     "build": "lerna run build --scope @test/app --stream",
     "format": "lerna run format --scope @test/configs --stream",
     "lint:all": "lerna run lint:all --scope @test/configs --stream",
-    "lint:fix": "eslint --fix 'packages/*/src/**/*.js*'",
+    "lint:fix": "lerna run lint:fix --scope @test/configs --stream",
     "prepare": "husky install",
     "staged": "lerna run staged --scope @test/configs --stream",
     "install:app": "lerna add --scope @test/app",
