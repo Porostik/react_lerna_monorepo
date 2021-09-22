@@ -5,6 +5,8 @@ import { Button } from '@test/shared/components';
 import React, { Suspense, useState } from 'react';
 import { render } from 'react-dom';
 
+import './app.scss';
+
 const DesktopApp = React.lazy(() =>
   import('./App').then((module) => ({ default: module.DesktopApp }))
 );
@@ -17,14 +19,14 @@ const Root = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   return (
-    <>
+    <div className="app">
       <Button onClick={() => setIsMobile((prev) => !prev)}>
         Change app mode
       </Button>
       <Suspense fallback={<h1>Loading</h1>}>
         {isMobile ? <MobileApp /> : <DesktopApp />}
       </Suspense>
-    </>
+    </div>
   );
 };
 

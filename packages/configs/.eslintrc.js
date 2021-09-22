@@ -16,7 +16,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       webpack: {
-        config: path.resolve(__dirname, '..', 'app', 'webpack.config.js'),
+        config: path.resolve(__dirname, 'webpack.config.js'),
       },
       node: {
         extensions: ['.js', '.jsx'],
@@ -28,4 +28,12 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
   },
+  overrides: [
+    {
+      files: ['webpack/*.js'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
+  ],
 };

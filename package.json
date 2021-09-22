@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deps": "lerna bootstrap",
-    "start": "lerna run start --scope @test/app --stream",
-    "build": "lerna run build --scope @test/app --stream",
+    "start": "lerna run dev --scope @test/configs --stream",
+    "build": "lerna run build --scope @test/configs --stream",
     "format": "lerna run format --scope @test/configs --stream",
     "lint:all": "lerna run lint:all --scope @test/configs --stream",
     "lint:fix": "lerna run lint:fix --scope @test/configs --stream",

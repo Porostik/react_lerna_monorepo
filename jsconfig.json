@@ -3,7 +3,8 @@
     "paths": {
       "baseUrl": ["."],
       "@test/mobile_app": ["./packages/mobileApp/src"],
-      "@test/shared/*": ["./packages/shared/src/*"]
+      "@test/shared/*": ["./packages/shared/src/*"],
+      "@test/configs/*": ["./packages/configs/*"]
     }
   },
   "exclude": ["node_modules/", "packages/**/node_modules"]
