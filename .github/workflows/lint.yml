@@ -11,15 +11,12 @@ jobs:
       - uses: actions/setup-node@v1
         name: 'setup node'
         with:
-          node-version: '12.x'
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: install
+          node-version: '16.x'
 
-      - name: 'install main deps'
+      - name: 'main deps'
         run: npm ci
 
-      - name: 'install'
+      - name: 'deps'
         run: npm run deps
 
       - name: 'lint'
