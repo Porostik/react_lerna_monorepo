@@ -20,4 +20,6 @@ module.exports = {
   rootDir: path.resolve(__dirname, '..', '..', '..'),
 
   distPath: path.resolve(__dirname, '..', '..', '..', './dist'),
+
+  variablesPath: path.resolve(shared, 'src/styles/variables.scss'),
 };

@@ -5,8 +5,6 @@ import { Button } from '@test/shared/components';
 import React, { Suspense, useState } from 'react';
 import { render } from 'react-dom';
 
-import './app.scss';
-
 const DesktopApp = React.lazy(() =>
   import('./App').then((module) => ({ default: module.DesktopApp }))
 );

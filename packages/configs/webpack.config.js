@@ -15,6 +15,7 @@ const {
   mobileAppSrc,
   appTemplate,
   publicFolder,
+  variablesPath,
 } = require('./webpack/constants');
 const { appSrc } = require('./webpack/constants');
 
@@ -65,6 +66,8 @@ module.exports = (env, argv) => {
               loader: 'sass-loader',
               options: {
                 sourceMap: !isProd,
+                data: `@import "${variablesPath}";`,
+                includePaths: [variablesPath],
               },
             },
           ],
