@@ -16,8 +16,11 @@ jobs:
         with:
           cmd: install
 
+      - name: 'install main deps'
+        run: npm ci
+
       - name: 'install'
-        run: yarn deps
+        run: npm run deps
 
       - name: 'lint'
-        run: yarn lint:all
+        run: npm run lint:all
