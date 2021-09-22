@@ -1,0 +1,18 @@
+.button {
+  background-color: #ccc;
+  background-image: url(./assets/right-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 97% center;
+  border: none;
+  padding: 7px 25px 7px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+
+  transition: all 0.3s linear;
+
+  &:hover {
+    border-radius: 10px;
+    background-color: #eeeeee;
+  }
+}
