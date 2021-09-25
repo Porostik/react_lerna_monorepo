@@ -10,5 +10,7 @@
   "dependencies": {
     "@types/react": "^17.0.22"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "enzyme": "^3.11.0"
+  }
 }

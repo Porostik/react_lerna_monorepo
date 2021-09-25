@@ -7,7 +7,8 @@
   "license": "ISC",
   "devDependencies": {
     "@test/configs": "^1.0.0",
-    "@types/jest": "^27.0.2"
+    "@types/jest": "^27.0.2",
+    "enzyme": "^3.11.0"
   },
   "dependencies": {
     "@test/mobile_app": "^0.0.1",
