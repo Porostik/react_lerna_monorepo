@@ -1,0 +1,9 @@
+{
+  "*.(js|jsx)": [
+    "npm run lint:staged",
+    "npm run format:staged"
+  ],
+  "*.(json|yaml|yml)": [
+    "npm run format:staged"
+  ]
+}

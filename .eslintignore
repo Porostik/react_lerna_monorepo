@@ -5,3 +5,5 @@ build
 
 webpack.config.js
 webpack
+
+jest

@@ -1,4 +1,4 @@
-const { publicFolder } = require('./constants');
+const { publicFolder } = require('../constants');
 
 module.exports = {
   static: {

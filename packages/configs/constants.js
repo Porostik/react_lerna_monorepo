@@ -1,8 +1,8 @@
 const path = require('path');
 
-const app = path.join(__dirname, '..', '..', 'app');
-const mobile = path.join(__dirname, '..', '..', 'mobileApp');
-const shared = path.join(__dirname, '..', '..', 'shared');
+const app = path.join(__dirname, '..', 'app');
+const mobile = path.join(__dirname, '..', 'mobileApp');
+const shared = path.join(__dirname, '..', 'shared');
 
 module.exports = {
   appPath: app,

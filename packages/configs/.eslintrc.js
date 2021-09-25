@@ -4,6 +4,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: ['plugin:react/recommended', 'plugin:import/recommended', 'airbnb'],
   parserOptions: {
@@ -27,13 +28,7 @@ module.exports = {
   rules: {
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'react/no-array-index-key': 'off',
   },
-  overrides: [
-    {
-      files: ['webpack/*.js'],
-      rules: {
-        'import/no-extraneous-dependencies': 'off',
-      },
-    },
-  ],
 };

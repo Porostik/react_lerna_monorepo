@@ -16,15 +16,15 @@ const {
   appTemplate,
   publicFolder,
   variablesPath,
-} = require('./webpack/constants');
-const { appSrc } = require('./webpack/constants');
+} = require('./constants');
+const { appSrc } = require('./constants');
 
 const jsRegExp = /\.js(x?)$/;
 const styleRegExp = /s?(a|c)?ss$/;
 
-module.exports = (env, argv) => {
+module.exports = (_env, argv) => {
   const isProd = argv.mode === 'production';
-  console.log(isProd);
+
   const config = {
     mode: 'production',
     entry: appIndex,

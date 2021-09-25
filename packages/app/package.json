@@ -3,14 +3,11 @@
   "version": "0.0.1",
   "main": "src/index.js",
   "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --color",
-    "start": "webpack serve --color"
-  },
+  "scripts": {},
   "license": "ISC",
   "devDependencies": {
-    "@test/configs": "^1.0.0"
+    "@test/configs": "^1.0.0",
+    "@types/jest": "^27.0.2"
   },
   "dependencies": {
     "@test/mobile_app": "^0.0.1",
