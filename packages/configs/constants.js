@@ -21,9 +21,9 @@ module.exports = {
   storagePath: storage,
   storageSrc: path.join(storage, 'src'),
 
-  rootDir: path.resolve(__dirname, '..', '..', '..'),
+  rootDir: path.resolve(__dirname, '..', '..'),
 
-  distPath: path.resolve(__dirname, '..', '..', '..', './dist'),
+  distPath: path.resolve(__dirname, '..', '..', './dist'),
 
   variablesPath: path.resolve(shared, 'src/styles/variables.scss'),
 };
