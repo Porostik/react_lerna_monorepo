@@ -1,9 +1,8 @@
-/* eslint-disable function-paren-newline */
-/* eslint-disable comma-dangle */
-/* eslint-disable implicit-arrow-linebreak */
-import { Button } from '@test/shared/components';
+/* eslint-disable */
 import React, { Suspense, useState } from 'react';
 import { render } from 'react-dom';
+import { Button } from '@test/shared/components';
+import '@test/shared/styles/main.scss';
 
 const DesktopApp = React.lazy(() =>
   import('./App').then((module) => ({ default: module.DesktopApp }))

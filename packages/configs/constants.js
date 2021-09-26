@@ -3,6 +3,7 @@ const path = require('path');
 const app = path.join(__dirname, '..', 'app');
 const mobile = path.join(__dirname, '..', 'mobileApp');
 const shared = path.join(__dirname, '..', 'shared');
+const storage = path.join(__dirname, '..', 'storage');
 
 module.exports = {
   appPath: app,
@@ -16,6 +17,9 @@ module.exports = {
 
   sharedPath: shared,
   sharedSrc: path.join(shared, 'src'),
+
+  storagePath: storage,
+  storageSrc: path.join(storage, 'src'),
 
   rootDir: path.resolve(__dirname, '..', '..', '..'),
 

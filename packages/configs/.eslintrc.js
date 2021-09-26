@@ -30,5 +30,7 @@ module.exports = {
     'react/prop-types': 'off',
     'import/no-extraneous-dependencies': 'off',
     'react/no-array-index-key': 'off',
+    'no-param-reassign': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 };

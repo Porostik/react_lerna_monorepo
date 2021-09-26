@@ -1,12 +1,14 @@
+import { api } from '@test/shared/utils';
+import { getStore } from '@test/storage/store';
 import React from 'react';
-import { Button } from '@test/shared/components';
+import { Provider } from 'react-redux';
 
-import image from './assets/image.png';
+import { App } from './App';
+
+const store = getStore({ api });
 
 export const MobileApp = () => (
-  <>
-    <img src={image} alt="" style={{ width: 40, height: 40 }} />
-    <Button>Shared button</Button>
-    <h1>Mobile</h1>
-  </>
+  <Provider store={store}>
+    <App />
+  </Provider>
 );

@@ -1,10 +1,9 @@
-/* eslint-disable */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-
+require('babel-polyfill');
 //
 //
 const devServer = require('./webpack/devServer');
@@ -16,8 +15,10 @@ const {
   appTemplate,
   publicFolder,
   variablesPath,
+  storagePath,
+  appSrc,
+  storageSrc,
 } = require('./constants');
-const { appSrc } = require('./constants');
 
 const jsRegExp = /\.js(x?)$/;
 const styleRegExp = /s?(a|c)?ss$/;
@@ -27,7 +28,9 @@ module.exports = (_env, argv) => {
 
   const config = {
     mode: 'production',
-    entry: appIndex,
+    entry: {
+      app: ['babel-polyfill', appIndex],
+    },
     devtool: isProd ? 'source-map' : false,
     output: {
       path: distPath,
@@ -40,7 +43,7 @@ module.exports = (_env, argv) => {
       rules: [
         {
           test: jsRegExp,
-          include: [appSrc, mobileAppSrc, sharedSrc],
+          include: [appSrc, mobileAppSrc, sharedSrc, storagePath],
           use: {
             loader: 'babel-loader',
             options: {
@@ -114,6 +117,7 @@ module.exports = (_env, argv) => {
       alias: {
         '@test/shared': sharedSrc,
         '@test/mobile_app': mobileAppSrc,
+        '@test/storage': storageSrc,
       },
       extensions: ['.js', '.json', '.jsx', '.scss'],
     },
