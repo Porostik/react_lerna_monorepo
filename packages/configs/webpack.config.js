@@ -1,3 +1,4 @@
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -63,6 +64,15 @@ module.exports = (_env, argv) => {
               options: {
                 sourceMap: !isProd,
                 esModule: false,
+                importLoaders: 2,
+              },
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  config: path.resolve(__dirname, './postcss.config.js'),
+                },
               },
             },
             {

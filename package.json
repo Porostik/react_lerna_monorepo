@@ -12,14 +12,13 @@
     "lint:all": "eslint --debug 'packages/*/src/**/*.js*' --color",
     "lint:fix": "eslint --fix 'packages/*/src/**/*.js*' --color",
     "lint:staged": "eslint --fix",
+    "lint:style": "stylelint \"packages/*/src/**/*.scss\" -s scss --color",
     "prepare": "husky install",
-    "staged": "lerna run staged --scope @test/configs --stream",
     "test": "jest --config=packages/configs/jest.config.js",
     "install:app": "lerna add --scope @test/app",
     "install:mobile": "lerna add --scope @test/mobile_app",
     "install:shared": "lerna add --scope @test/shared",
-    "install:configs": "lerna add --scope @test/configs",
-    "test:app": "lerna run test --scope @test/app --stream"
+    "install:configs": "lerna add --scope @test/configs"
   },
   "author": "",
   "license": "ISC",
@@ -27,7 +26,6 @@
     "packages/**"
   ],
   "devDependencies": {
-    "agent-base": "^6.0.2",
     "eslint": "^7.29.0",
     "husky": "^7.0.2",
     "jest": "^27.2.1",
@@ -35,5 +33,17 @@
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
     "webpack": "^5.54.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
