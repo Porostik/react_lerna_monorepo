@@ -5,12 +5,12 @@ export const fetchUsers = createAsyncThunk(
   async (_payload, { rejectWithValue, extra }) => {
     try {
       const { data } = await extra.api.get(
-        'https://jsonplaceholder.typicode.com/users'
+        'https://jsonplaceholder.typicode.com/users',
       );
 
       return data;
     } catch (e) {
       return rejectWithValue('Error');
     }
-  }
+  },
 );
