@@ -13,11 +13,8 @@ jobs:
         with:
           node-version: '16.x'
 
-      - name: 'main deps'
-        run: npm ci
-
       - name: 'deps'
-        run: npm run deps
+        run: npx lerna bootstrap
 
       - name: 'lint'
         run: npm run lint:all
