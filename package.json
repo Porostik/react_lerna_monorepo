@@ -8,7 +8,7 @@
     "start": "webpack serve --config packages/configs/webpack.config.js --mode=development --hot",
     "build": "webpack --config packages/configs/webpack.config.js --mode=production",
     "format": "prettier --write \"packages/*/src/**/*.js\" \"packages/*/src/**/*.jsx\"",
-    "format:staged": "prettier --write",
+    "format:staged": "prettier --config=.prettierrc.js --write",
     "lint:all": "eslint --debug 'packages/*/src/**/*.js*' --color",
     "lint:fix": "eslint --fix 'packages/*/src/**/*.js*' --color",
     "lint:staged": "eslint --fix",
