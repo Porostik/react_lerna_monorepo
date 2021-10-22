@@ -5,6 +5,7 @@ module.exports = {
     directory: publicFolder,
   },
   port: 3000,
+  historyApiFallback: true,
   client: {
     overlay: {
       errors: true,

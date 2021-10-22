@@ -13,14 +13,17 @@ jobs:
         with:
           node-version: '16.x'
 
-      - name: 'deps'
-        run: npx lerna bootstrap
+      # - name: 'deps'
+      #   run: npx lerna bootstrap
 
-      - name: 'lint'
-        run: npm run lint:all
+      # - name: 'lint'
+      #   run: npm run lint:all
 
-      - name: 'test'
-        run: npm run test
+      # - name: 'test'
+      #   run: npm run test
 
-      - name: 'build'
-        run: npm run build
+      # - name: 'build'
+      #   run: npm run build
+
+      - name: Test
+        uses: ./.github/actions/test
