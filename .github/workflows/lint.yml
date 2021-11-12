@@ -8,6 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: porostik/translation-check@master
+        with:
+          path_to_files: 'packages/shared/src/translations'
+          main_file: 'main.json'
+
       - uses: actions/setup-node@v1
         name: 'setup node'
         with:
