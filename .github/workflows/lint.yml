@@ -12,7 +12,7 @@ jobs:
       - run: echo $GITHUB_REF#refs/heads/
       - run: echo GITHUB_SHA
 
-      - run: echo ${{ github.head_ref }}
+      - run: echo >> .env >> RELEASE=${{ github.head_ref }}
       - run: echo ${{ github.sha }}
 
       - uses: actions/setup-node@v1
