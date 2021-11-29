@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo GITHUB_REF#refs/heads/
+      - run: echo $(GITHUB_REF#refs/heads/)
 
       - uses: actions/setup-node@v1
         name: 'setup node'
