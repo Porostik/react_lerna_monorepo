@@ -11,7 +11,7 @@ jobs:
 
       - run: echo "$(RELEASE=${{ github.head_ref }})" >> .env
 
-      - run: echo .env
+      - run: cat .env
 
       - uses: actions/setup-node@v1
         name: 'setup node'
