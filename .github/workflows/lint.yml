@@ -9,11 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo $GITHUB_REF#refs/heads/
-      - run: echo GITHUB_SHA
-
       - run: echo >> .env >> RELEASE=${{ github.head_ref }}
-      - run: echo ${{ github.sha }}
+
+      - run: echo .env
 
       - uses: actions/setup-node@v1
         name: 'setup node'
