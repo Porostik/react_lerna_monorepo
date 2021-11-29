@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo \nRELEASE=${{ github.head_ref }} >> .env
+      - run: echo \\nRELEASE=${{ github.head_ref }} >> .env
 
       - run: cat .env
 
