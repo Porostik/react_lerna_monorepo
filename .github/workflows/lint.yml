@@ -12,17 +12,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo "" >> .env && echo RELEASE=${{ github.head_ref }} >> .env
+      # - run: echo "" >> .env && echo RELEASE=${{ github.head_ref }} >> .env
 
-      - run: cat .env
+      # - run: cat .env
 
       - uses: actions/setup-node@v1
         name: 'setup node'
         with:
           node-version: '16.x'
 
-      # - name: 'deps'
-      #   run: npx lerna bootstrap
+      - name: 'deps'
+        run: npx lerna bootstrap
 
       # - name: 'lint'
       #   run: npm run lint:all
