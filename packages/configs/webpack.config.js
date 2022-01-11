@@ -27,6 +27,8 @@ const styleRegExp = /s?(a|c)?ss$/;
 module.exports = (_env, argv) => {
   const isProd = argv.mode === 'production';
 
+  console.log(process.env.MY_ENV);
+
   const config = {
     mode: 'production',
     entry: {

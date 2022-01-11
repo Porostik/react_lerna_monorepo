@@ -3,6 +3,9 @@ name: 'lint'
 on:
   pull_request:
 
+env:
+  MY_ENV: 'test'
+
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -27,8 +30,8 @@ jobs:
       # - name: 'test'
       #   run: npm run test
 
-      # - name: 'build'
-      #   run: npm run build
+      - name: 'build'
+        run: npm run build
 
-      - name: Test
-        uses: ./.github/actions/test
+      # - name: Test
+      #   uses: ./.github/actions/test
